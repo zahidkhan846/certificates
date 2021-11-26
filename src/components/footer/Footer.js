@@ -3,7 +3,7 @@ import styles from "./Footer.module.css";
 
 function Footer() {
   return (
-    <footer>
+    <footer className={styles.footer}>
       <svg
         width="156"
         height="33"
@@ -146,8 +146,9 @@ function Footer() {
           strokeWidth="1.4613"
         />
       </svg>
-      <p>
-        &copy; codewithzahid | {new Date().getFullYear()}, all rights reserved.
+      <p className={styles.footerContent}>
+        &copy; codewithzahid | {new Date().getFullYear()},{" "}
+        <span>all rights reserved.</span>
       </p>
     </footer>
   );

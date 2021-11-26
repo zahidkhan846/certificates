@@ -1,4 +1,4 @@
-footer {
+.footer {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -6,4 +6,8 @@ footer {
   gap: 0.5rem;
 
   margin: 2rem 0;
+}
+
+.footerContent span {
+  color: rgb(71, 70, 70);
 }
