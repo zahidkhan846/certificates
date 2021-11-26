@@ -1,0 +1,46 @@
+header {
+  background-color: var(--secondary-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.headerWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 9vh;
+  padding: 0 1rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo:hover {
+  opacity: 0.75;
+}
+
+.logo h3 {
+  color: var(--accent-color);
+  font-weight: 400;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+nav ul a {
+  color: var(--light-color);
+  transition: color 0.3s ease;
+}
+
+nav ul a:hover {
+  color: var(--accent-color);
+}
