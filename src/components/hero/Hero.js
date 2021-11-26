@@ -22,7 +22,7 @@ function Hero() {
       </svg>
       <div className={styles.text}>
         <h1>
-          Hi! I am <span>Zahid</span> Khan
+          Hi! I am <span>Zahid</span> Khan.
         </h1>
         <p>
           I am a Full stack developer, I specialize in MERN and MEAN Stack

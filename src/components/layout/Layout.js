@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import Footer from "../footer/Footer";
 import Navbar from "../navbar/Navbar";
 
 function Layout(props) {
@@ -8,6 +9,7 @@ function Layout(props) {
       <main className="container">
         <div style={{ marginTop: "9vh" }}>{props.children}</div>
       </main>
+      <Footer />
     </Fragment>
   );
 }
