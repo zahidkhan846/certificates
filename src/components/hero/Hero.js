@@ -29,7 +29,7 @@ function Hero() {
           development but wait there is more, "click me" to learn more.
         </p>
         <a
-          href="https://cwz-next-zake.vercel.app/"
+          href="https://codewithzahid.in"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.btn}
