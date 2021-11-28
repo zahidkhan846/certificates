@@ -16,9 +16,7 @@ function CertificateDetail() {
       const res = await axios.get(
         `https://my-certificates-zahid-khan-default-rtdb.firebaseio.com/certificates/${cId}.json`
       );
-      if (res.data) {
-        setDoc(res.data);
-      }
+      setDoc(res.data);
       setLoading(false);
     } catch (error) {
       console.log(error.response``);
@@ -40,7 +38,7 @@ function CertificateDetail() {
 
   return (
     <div>
-      {doc && (
+      {!loading && doc && (
         <div className={styles.grid}>
           <div className={styles.cImage}>
             <img src={doc.cUrl} alt={doc.cName} />
