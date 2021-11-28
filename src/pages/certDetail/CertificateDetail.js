@@ -10,22 +10,21 @@ function CertificateDetail() {
 
   const { id } = useParams();
 
-  const getSingleDoc = async (cId) => {
-    try {
-      setLoading(true);
-      const res = await axios.get(
-        `https://my-certificates-zahid-khan-default-rtdb.firebaseio.com/certificates/${cId}.json`
-      );
-      setDoc(res.data);
-      setLoading(false);
-    } catch (error) {
-      console.log(error.response``);
-      setLoading(false);
-    }
-  };
-
   useEffect(() => {
-    getSingleDoc(id);
+    if (!id) return;
+    setLoading(true);
+    axios
+      .get(
+        `https://my-certificates-zahid-khan-default-rtdb.firebaseio.com/certificates/${id}.json`
+      )
+      .then((res) => {
+        setDoc(res.data);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.log(err.response.data);
+        setLoading(false);
+      });
   }, [id]);
 
   if (loading) {
