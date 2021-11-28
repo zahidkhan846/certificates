@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
+import { Link } from "react-router-dom";
 import Loading from "../../components/loading/Loading";
 import styles from "./CertificateDetail.module.css";
 
@@ -71,6 +72,9 @@ function CertificateDetail() {
         <p>
           {doc.instructor} by {doc.insBrand}
         </p>
+        <Link className={styles.btn} to="/">
+          Go Back
+        </Link>
       </div>
     </div>
   );
