@@ -6,13 +6,11 @@ import styles from "./CertificateDetail.module.css";
 
 function CertificateDetail() {
   const [doc, setDoc] = useState(null);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   const { id } = useParams();
 
   useEffect(() => {
-    if (!id) return;
-    setLoading(true);
     axios
       .get(
         `https://my-certificates-zahid-khan-default-rtdb.firebaseio.com/certificates/${id}.json`
@@ -22,7 +20,7 @@ function CertificateDetail() {
         setLoading(false);
       })
       .catch((err) => {
-        console.log(err.response.data);
+        console.log(err);
         setLoading(false);
       });
   }, [id]);
@@ -37,7 +35,7 @@ function CertificateDetail() {
 
   return (
     <div>
-      {!loading && doc && (
+      {doc && (
         <div className={styles.grid}>
           <div className={styles.cImage}>
             <img src={doc.cUrl} alt={doc.cName} />

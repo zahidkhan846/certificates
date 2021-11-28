@@ -4,9 +4,7 @@ import styles from "./Certificate.module.css";
 
 function Certificate(props) {
   return (
-    <Link
-      to={`/certificate/${props.certificate.id}?certificateId=${props.certificate.cId}`}
-    >
+    <Link to={`/certificate/${props.certificate.id}`}>
       <li className={styles.card}>
         <div className={styles.content}>
           <img
