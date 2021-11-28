@@ -23,7 +23,7 @@ function CertificateDetail() {
         console.log(err);
         setLoading(false);
       });
-  }, [id]);
+  }, []);
 
   if (loading) {
     return (
