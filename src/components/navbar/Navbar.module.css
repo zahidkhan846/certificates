@@ -3,7 +3,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   z-index: 1;
 }
 
@@ -13,6 +13,17 @@ header {
   justify-content: space-between;
   height: 9vh;
   padding: 0 1rem;
+  width: 100%;
+}
+
+@media (max-width: 500px) {
+  .headerWrapper {
+    justify-content: center;
+  }
+
+  nav {
+    display: none;
+  }
 }
 
 .logo {

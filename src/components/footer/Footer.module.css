@@ -5,9 +5,20 @@
   align-items: center;
   gap: 0.5rem;
 
-  margin: 2rem 0;
+  height: 30vh;
 }
 
 .footerContent span {
   color: rgb(71, 70, 70);
+}
+
+@media (max-width: 500px) {
+  .footer {
+    padding: 0 1rem;
+  }
+
+  .footerContent {
+    width: 300px;
+    text-align: center;
+  }
 }

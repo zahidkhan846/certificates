@@ -1,12 +1,22 @@
 .hero {
   margin-bottom: 1rem;
+  height: 61vh;
+  width: 100%;
+
   position: relative;
+  overflow: hidden;
+}
+
+.heroContainer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .text {
-  position: absolute;
-  top: 20vh;
-  padding: 0 1rem;
+  padding-left: 1rem;
 }
 
 .text h1 {
@@ -57,9 +67,41 @@
   box-shadow: 0 0 0.75rem 0 rgba(96, 5, 99, 0.75);
 }
 
-.design {
+.wave {
   position: absolute;
+  z-index: -1;
+  bottom: 0;
+  left: 0;
   right: 0;
-  top: 10vh;
-  padding-right: 1rem;
+
+  opacity: 80%;
+}
+
+@media (max-width: 1299px) {
+  .design {
+    padding-right: 1rem;
+  }
+
+  .heroContainer {
+    justify-content: center;
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 863px) {
+  .design {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .design {
+    display: none;
+    padding-right: 1rem;
+  }
+
+  .textContainer {
+    justify-content: center;
+    padding: 0 1rem;
+  }
 }

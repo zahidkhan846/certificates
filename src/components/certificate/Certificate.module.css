@@ -6,6 +6,12 @@
   overflow: hidden;
 }
 
+@media (max-width: 450px) {
+  .card {
+    width: 300px;
+  }
+}
+
 .image {
 }
 
